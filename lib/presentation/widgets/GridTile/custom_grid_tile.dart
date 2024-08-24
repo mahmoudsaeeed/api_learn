@@ -7,9 +7,9 @@ class CustomGridTile extends StatelessWidget {
   final CardModel card ;
   @override
   Widget build(BuildContext context) {
-    return GridTile(
-      child: Text(""),
+    return const GridTile(
       footer: null,
+      child: Text(""),
       
       );
   }
