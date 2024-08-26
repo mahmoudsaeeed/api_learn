@@ -2,7 +2,9 @@ import 'package:api_learn/constants.dart';
 import 'package:api_learn/my_routes.dart';
 import 'package:flutter/material.dart';
 
-void main() {}
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

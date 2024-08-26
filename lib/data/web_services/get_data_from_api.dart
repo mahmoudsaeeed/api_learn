@@ -18,6 +18,7 @@ class GetDataFromAPI {
 
   Future<List> fetchAllCards() async {
     Response res = await dio.get(allCard);
+    
     debugPrint(res.data.toString());
     return res.data;
   }

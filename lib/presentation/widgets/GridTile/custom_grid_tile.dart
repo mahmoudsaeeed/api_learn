@@ -2,15 +2,24 @@ import 'package:api_learn/data/models/card_model.dart';
 import 'package:flutter/material.dart';
 
 class CustomGridTile extends StatelessWidget {
-  const CustomGridTile({super.key, required this.card,});
+  const CustomGridTile({
+    super.key,
+    required this.card,
+  });
 
-  final CardModel card ;
+  final CardModel card;
   @override
   Widget build(BuildContext context) {
-    return const GridTile(
-      footer: null,
-      child: Text(""),
-      
-      );
+    return GridTile(
+      footer: Text(card.title),
+      child: Container(
+        color: Colors.grey,
+        child: FadeInImage.assetNetwork(
+          placeholder: "assets/images/loading.gif",
+          image: card.imageUrl,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
   }
 }
